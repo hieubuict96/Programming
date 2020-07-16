@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+div div {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    border: 1px solid red;
+    margin: 100px;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+div div {
+    position: relative;
+}
+
+div div:first-child:hover p:nth-child(2) {
+    display: inline-block;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: -145px;
+}
+
+div div:first-child:hover p:nth-child(3) {
+    display: inline-block;
+    border-left: 10px solid black;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 18px;
+    left: -10px;
+}
+
+div div:nth-child(2):hover p:nth-child(2) {
+    display: inline-block;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 150px;
+    width: 150px;
+}
+
+div div:nth-child(2):hover p:nth-child(3) {
+    display: inline-block;
+    border-right: 10px solid black;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: 20px;
+    left: 132px;
+}
+
+div div:nth-child(3):hover p:nth-child(2) {
+    display: inline-block;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    top: -65px;
+    left: -4px;
+    width: 140px;
+}
+
+div div:nth-child(3):hover p:nth-child(3) {
+    display: inline-block;
+    border-top: 10px solid black;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -27px;
+    left: 55px;
+}
+
+div div:nth-child(4):hover p:nth-child(2) {
+    display: inline-block;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    top: 85px;
+    left: 0px;
+    width: 160px;
+}
+
+div div:nth-child(4):hover p:nth-child(3) {
+    display: inline-block;
+    border-bottom: 10px solid black;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: 65px;
+    left: 68px;
+}

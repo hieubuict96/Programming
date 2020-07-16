@@ -1,0 +1,52 @@
+li a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+#a{
+    float: left;
+}
+
+#b{
+    float: left;
+    padding-left: 0;
+    
+    position: absolute;
+    top: 0.5rem;
+    left: calc(50% - 126px);
+}
+
+#c{
+    float: right;
+    margin-right: 40px;
+}
+
+body{
+    background-color: rgb(233, 235, 238);
+}
+
+nav {
+    background-color: white;
+    height: 53px;
+    
+}
+
+#d{
+    float: left;
+    width: 200px;
+    height: 900px;
+    line-height: 900px;
+    background-color: rgb(246, 244, 244);
+    text-align: center;
+}
+#e{
+    width: calc(100% - 200px);
+    height: 900px;
+    float: left;
+    line-height: 900px;
+    background-color: transparent;
+    text-align: center;
+}

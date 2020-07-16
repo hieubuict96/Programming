@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label, input, span {
+            display: inline-block;
+        }
+
+        span + span {
+            display: none;
+        }
+
+        input + span {
+            width: 50px;
+            height: 32px;
+            background-color: chartreuse;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        p {
+            position: relative;
+        }
+
+        .tab1 {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+        }
+
+        .tab2 {
+            position: absolute;
+            top: -5px;
+            left: 45px;
+        }
+
+        .tab3 {
+            position: absolute;
+            top: -5px;
+            left: 95px;
+        }
+        input:first-child:checked + span + span {
+            display: inline-block;
+            width: 500px;
+            height: 300px;
+            background-color: cornflowerblue;
+            position: absolute;
+            top: 27px;
+            left: -5px;
+        }
+        input:nth-child(2):checked + span + span {
+            display: inline-block;
+            width: 500px;
+            height: 300px;
+            background-color: cornflowerblue;
+            position: absolute;
+            top: 27px;
+            left: -5px;
+        }
+        input:nth-child(3):checked + span + span {
+            display: inline-block;
+            width: 500px;
+            height: 300px;
+            background-color: cornflowerblue;
+            position: absolute;
+            top: 27px;
+            left: -5px;
+        }
+        input:first-child:checked + span {
+            width: 50px;
+            height: 32px;
+            background-color: rgb(129, 139, 119);
+            line-height: 32px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <label><input type="radio" name="tab" checked><span class="tab1">Tab 1</span><span>Đây là tab 1</span></label>
+        <label><input type="radio" name="tab"><span class="tab2">Tab 2</span><span>Đây là tab 2</span></label>
+        <label><input type="radio" name="tab"><span class="tab3">Tab 3</span><span>Đây là tab 3</span></label>
+    </p>
+</body>
+</html>
