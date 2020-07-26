@@ -1,10 +1,10 @@
-let nguoi = [
+let people = [
     'Tuấn',
     'Tiến', 
     'Tùng',
     'Giang'
 ]
 
-    nguoi.forEach(value => {
+    people.forEach(value => {
         console.log('xin chào ' + value)
     })
