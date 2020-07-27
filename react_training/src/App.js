@@ -5,7 +5,7 @@ import Detail from './components/Detail'
 import Cart from './components/Cart'
 import Contact from './components/Contact'
 import { Switch, Route } from 'react-router-dom'
-import 'project_react/bootstrap.min.css'
+import 'project_react/Bootstrap 4.1.3/css/bootstrap.min.css'
 
 class App extends Component {
 	render(){
