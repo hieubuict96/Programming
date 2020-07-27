@@ -6,7 +6,6 @@ import Cart from './components/Cart'
 import Contact from './components/Contact'
 import { Switch, Route } from 'react-router-dom'
 import 'project_react/bootstrap.min.css'
-import logo from '../logo.svg'
 
 class App extends Component {
 	render(){
