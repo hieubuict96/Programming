@@ -5,3 +5,5 @@ function abc(){
 }
     abc()
 console.log(a)
+
+document.getElementById("id").innerHTML = ["ab", "bc", "cd"]
