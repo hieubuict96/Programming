@@ -1,13 +1,7 @@
-
-export const Ab = props => {
-    let abv = {...props, er: "fghj"}
-return <p>Ten toi la {props.ho} {props.va} {props.ten}</p>
+const App1 = props => {
+return <p>{props.mess}</p>
 }
 
-const Abc = props => {
-    return <Ab ho="Bui" va="Dinh" ten="Hieu" />
+const App2 = props => {
+    return <p></p>
 }
-
-const ComponentCha = (props) => {
-    return <ComponentChau {...props} />
-  }
