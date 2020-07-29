@@ -7,14 +7,15 @@ class Product extends Component {
 
     render(){
         return(
-            <div className="card">
-                <img src={this.props.img} className="card-img-top" />
-                <div className="card-body">
-                    <div>
-                        <span className="mr-auto">{this.props.title}</span><span>{this.props.price} $</span>
+            <div className="card col-sm-4 col-md-2 m-4 p-0">
+                <img src={this.props.img} className="card-img-top p-3" />
+                <div className="card-body p-0">
+                    <div className="d-flex">
+                        <span className="mr-auto">{this.props.title}</span>
+                        <span>{this.props.price} $</span>
                     </div>
-                    <div>
-                        <span>Company</span>
+                    <div className="d-flex">
+                        <span className="text-capitalize">company</span>
                         <span className="ml-auto">{this.props.company}</span>
                     </div>
                 </div>
