@@ -9,7 +9,7 @@ class Index extends Component {
                 <div className="row justify-content-center">
                     <ContextConsumer>
                         {context => context.map(value => {
-                            return <Product img={value.img} title={value.title} price={value.price} company={value.company} />
+                            return <Product {...value} />
                         })}
                     </ContextConsumer>
                 </div>
