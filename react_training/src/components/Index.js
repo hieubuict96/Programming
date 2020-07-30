@@ -7,9 +7,12 @@ class Index extends Component {
         return(
             <div className="container">
                 <div className="row justify-content-center">
+                   
                     <ContextConsumer>
-                        {context => context.map(value => {
-                            return <Product {...value} />
+                        {context =>  context.map(value => {
+                            return(
+                                <Product {...value} />
+                            )
                         })}
                     </ContextConsumer>
                 </div>
