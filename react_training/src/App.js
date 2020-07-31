@@ -11,7 +11,7 @@ import 'project_react/fontawesome-free-5.13.0-web/css/all.min.css'
 class App extends Component {
 	render(){
 		return(
-			<React.Fragment>
+			<>
 				<NavBar />
 				<Switch>
 					<Route exact path=""  component= {Index} />
@@ -19,7 +19,7 @@ class App extends Component {
 					<Route exact path="/cart"   component={Cart} />
 					<Route exact path="/contact"  component={Contact} />
 				</Switch>
-			</React.Fragment>
+			</>
 		)
 	}
 }
