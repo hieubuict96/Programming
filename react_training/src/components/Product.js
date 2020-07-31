@@ -8,7 +8,6 @@ class Product extends Component {
     }
 
     clickButton() {
-
     }
 
     render() {
@@ -79,8 +78,10 @@ transition: all 0.5s linear 0s;
 }
 
 .cart-btn:hover {
-    background: white;
+    background: rgb(177, 122, 122);
     color: blue;
+    cursor: pointer;
+    border-color: transparent;
 }
 `
 

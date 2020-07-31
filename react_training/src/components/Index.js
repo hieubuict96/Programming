@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {ContextConsumer, ContextProduct} from './context.js'
+import {ContextConsumer} from './context.js'
 import Product from './Product.js';
 
 class Index extends Component {
