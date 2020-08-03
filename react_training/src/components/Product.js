@@ -18,9 +18,16 @@ class Product extends Component {
                         <Link to="/Detail">
                             <img src={this.props.img} alt="store" className="card-img-top p-4" />
                         </Link>
-                        <button className="cart-btn py-1 px-2"disabled={this.props.inCart} onClick={this.clickButton()}>
-                            {(this.props.inCart === true) ? "InCart" : <i className="fas fa-cart-plus" />}
+                        {
+                        (this.props.inCart === true) ?
+                        <button className="incart py-1 px-2 text-capitalize" disabled>
+                            in cart
                         </button>
+                        :
+                        <button className="cart-btn py-1 px-2">
+                            <i className="fas fa-cart-plus" />
+                        </button>
+                        }
                     </div>
                     <div className="card-footer p-0">
                         <div className="d-flex">
@@ -61,6 +68,18 @@ transition: all 0.5s linear 0s;
     cursor: pointer;
 }
 
+.incart {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px 0 0;
+    background-color: rgb(121, 121, 245);
+    color: rgb(21, 21, 204);
+    border: 0.1px solid transparent;
+    transition: all 0.5s linear;
+    transform: translate(100%, 100%);
+}
+
 .cart-btn {
     position: absolute;
     right: 0;
@@ -73,7 +92,7 @@ transition: all 0.5s linear 0s;
     transform: translate(100%, 100%);
 }
 
-&:hover .cart-btn {
+&:hover .cart-btn, &:hover .incart {
     transform: translate(0, 0);
 }
 
