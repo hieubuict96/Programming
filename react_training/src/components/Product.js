@@ -18,7 +18,7 @@ class Product extends Component {
                         <Link to="/Detail">
                             <img src={this.props.img} alt="store" className="card-img-top p-4" />
                         </Link>
-                        <button className="cart-btn py-1 px-2" onClick={this.clickButton()}>
+                        <button className="cart-btn py-1 px-2"disabled={this.props.inCart} onClick={this.clickButton()}>
                             {(this.props.inCart === true) ? "InCart" : <i className="fas fa-cart-plus" />}
                         </button>
                     </div>
@@ -66,9 +66,9 @@ transition: all 0.5s linear 0s;
     right: 0;
     bottom: 0;
     border-radius: 10px 0 0;
-    background-color: blue;
-    color: white;
-    border-width: 0.1px;
+    background-color: rgb(121, 121, 245);
+    color: rgb(21, 21, 204);
+    border: 0.1px solid transparent;
     transition: all 0.5s linear;
     transform: translate(100%, 100%);
 }
@@ -78,8 +78,8 @@ transition: all 0.5s linear 0s;
 }
 
 .cart-btn:hover {
-    background: rgb(177, 122, 122);
-    color: blue;
+    background: rgb(21, 21, 204);
+    color: white;
     cursor: pointer;
     border-color: transparent;
 }
