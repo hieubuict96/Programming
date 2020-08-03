@@ -13,11 +13,10 @@ class Product extends Component {
     render() {
         return (
             <DivWrapper className="col-sm-9 col-md-5 mx-md-1 col-lg-3 mx-lg-2 col-xl-2 mx-xl-4 p-0 my-4">
+                <Link to="/detail" className="link">
                 <div className="card">
                     <div className="img-container">
-                        <Link to="/Detail">
                             <img src={this.props.img} alt="store" className="card-img-top p-4" />
-                        </Link>
                         {
                         (this.props.inCart === true) ?
                         <button className="incart py-1 px-2 text-capitalize" disabled>
@@ -40,6 +39,7 @@ class Product extends Component {
                         </div>
                     </div>
                 </div>
+                </Link>
             </DivWrapper>
         )
     }
@@ -64,7 +64,7 @@ transition: all 0.5s linear 0s;
 }
 
 &:hover {
-    box-shadow: 3px 3px 8px 0 rgb(230, 145, 255);
+    box-shadow: 0px 0px 5px 0 rgb(230, 145, 255);
     cursor: pointer;
 }
 
@@ -101,6 +101,10 @@ transition: all 0.5s linear 0s;
     color: white;
     cursor: pointer;
     border-color: transparent;
+}
+
+.link {
+    text-decoration: none;
 }
 `
 

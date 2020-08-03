@@ -1,9 +1,13 @@
-let gth = ["abd", "tth", "tht", "tly"]
-
-let g = 0;
-(gth.map(value => {
-    return "abc"
-})).forEach(valuee => {
+function execute() {
+    var g = 0;
     g += 1;
-    console.log(g)
-})
+}
+
+function value() {
+    var h= 8;
+    return (h += 1);
+}
+
+console.log(execute())
+console.log(value())
+

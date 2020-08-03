@@ -1,7 +1,8 @@
 <?php
-session_start();
 
-$_SESSION["abc"] = "hieubuidinh";
+$a = true;
 
-?>
-<a href="php2.php">click me</a> 
+ $b = ($a == true) ? "Toán tử điều kiện là trả về giá trị" : "nó cũng trả về giá trị";
+
+echo $b;
+
