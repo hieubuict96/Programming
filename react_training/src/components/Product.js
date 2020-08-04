@@ -7,12 +7,13 @@ class Product extends Component {
         super(props);
     }
 
-    clickButton() {
+    addCart(id) {
+        return "add product successfully";
     }
 
     render() {
         return (
-            <DivWrapper className="col-sm-9 col-md-5 mx-md-1 col-lg-3 mx-lg-2 col-xl-2 mx-xl-4 p-0 my-4">
+            <DivWrapper className="col-sm-12 col-md-6 col-lg-3 col-xl-2 mx-md-1 mx-lg-2 mx-xl-4 p-0 my-4">
                 <Link to="/detail" className="link">
                 <div className="card">
                     <div className="img-container">
@@ -23,7 +24,7 @@ class Product extends Component {
                             in cart
                         </button>
                         :
-                        <button className="cart-btn py-1 px-2">
+                        <button className="cart-btn py-1 px-2" onClick={() => this.addCart(this.props.id)}>
                             <i className="fas fa-cart-plus" />
                         </button>
                         }
