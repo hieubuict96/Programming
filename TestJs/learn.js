@@ -1,11 +1,5 @@
-let obj = {
-    a: "abc",
-    a: "def",
-    a: "ghi",
-    d: "klm"
+if (2>1) {
+    let abcdd = 56;
 }
 
-const ab = {...obj}
-const ghi = [ab, "nov"]
-console.log(ghi)
-
+console.log(abcdd)
