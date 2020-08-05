@@ -1,13 +1,11 @@
-function execute() {
-    var g = 0;
-    g += 1;
+let obj = {
+    a: "abc",
+    a: "def",
+    a: "ghi",
+    d: "klm"
 }
 
-function value() {
-    var h= 8;
-    return (h += 1);
-}
-
-console.log(execute())
-console.log(value())
+const ab = {...obj}
+const ghi = [ab, "nov"]
+console.log(ghi)
 
