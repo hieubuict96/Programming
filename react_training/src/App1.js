@@ -1,14 +1,15 @@
-import React, {Component} from "react"
+ import React,  { Component } from "react"
 
 export default class App1 extends Component {
-        state = {
-            a: "abcd",
-            b: "efgh"
-        }
+    state = {
+        a: "abcd",
+        b: "efgh"
+    }
 
     abc = () => {
         this.setState(
-            function abcd(){
+            function abcd() {
+                console.log("ahgfk")
                 return {a: "iklm"}
             }
         )
@@ -18,9 +19,8 @@ export default class App1 extends Component {
         return (
             <div>
                 <p>{this.state.a}</p>
-                <button onClick={this.abc}>click</button>
+                <button onClick={this.abc}>Click</button>
             </div>
         )
     }
 }
-
