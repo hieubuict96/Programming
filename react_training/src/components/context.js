@@ -5,14 +5,23 @@ const ContextProduct = React.createContext(storeProducts);
 
 class ProductProvider extends Component {
     state = {
-        products: [],
+        products: storeProducts,
         cart: [],
         detailProduct: [],
         cartTotal: 0,
         subTotal: 0
     }
 
-    addToCart = () => {
+    addToCart = (id) => {
+        const product = this.state.products.find(item => item.id === id)
+        product.inCart = 
+        this.setState(
+            {
+            cart: [...this.cart, product]
+        })
+    }
+
+    increment = (id) => {
 
     }
 

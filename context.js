@@ -167,7 +167,7 @@ class ProductProvider extends Component {
     return (
       <ProductContext.Provider value={
           {
-              ...this.state, 
+              ...this.state,
               handleDetail: this.handleDetail,
               addToCart: this.addToCart,
               openModal: this.openModal,
