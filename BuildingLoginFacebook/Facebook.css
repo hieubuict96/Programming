@@ -1,0 +1,93 @@
+body {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#facebook {
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    padding: 0px;
+    margin-left: 460px;
+    margin-right: 420px;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+nav {
+    height: 80px;
+    background-color: #405d9b;
+    display: flex;
+}
+
+#password {
+    width: 150px;
+}
+
+.login {
+    display: flex;
+}
+
+.login div span {
+    color: white;
+}
+
+.login button {
+    color: white;
+    background-color: transparent;
+    border: 1px solid #29487d;
+    padding: 4px;
+}
+
+.email {
+    margin-top: 17px;
+    position: relative;
+}
+
+#email {
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    height: 18px;
+}
+
+.password {
+    margin-top: 17px;
+    margin-left: 75px;
+    position: relative;
+    margin-right: 100px;
+}
+
+#password {
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    height: 18px;
+}
+
+.password a {
+    position: absolute;
+    top: 43px;
+    left: 0px;
+    width: 130px;
+    text-decoration: none;
+    color: #9cb4d8;
+}
+
+input {
+    border: 1px solid black;
+}
+
+input:focus {
+    outline: transparent solid 1px;
+}
+
+.btnLogIn {
+    font-weight: bold;
+    margin-top: 37px;
+    padding: 4px;
+    height: 23px;
+}

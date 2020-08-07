@@ -1,14 +1,17 @@
-p{
-    height: 20px;
-    width: 100px;
-    background-color: blue;
-    margin: 30px;
+.ab {
+    display: flex;
+    height: 100px;
+    background-color: yellow;
 }
 
-div {
-    height: 20px;
-    width: 200px;
-    background-color: brown;
-    margin: 40px;
-    margin-bottom: 50px;
+.a {
+    margin-top:  10px;
+    background-color: violet;
+    width: 100px;
+}
+
+.b {
+    margin-top: 20px;
+    background-color: rgb(52, 90, 86);
+    width: 100px;
 }
