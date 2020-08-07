@@ -1,7 +1,7 @@
 let a = [1,2,3,4,5]
+function myfunc() {
+    a[3] = 10
+}
 
-let b = a.find(item => item ===3)
-
-a[2] = 8
+let b = a;
 console.log(b)
-console.log(a)

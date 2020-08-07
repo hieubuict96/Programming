@@ -13,12 +13,12 @@ class ProductProvider extends Component {
     }
 
     addToCart = (id) => {
-        const product = this.state.products.find(item => item.id === id)
+        const product = {...this.state.products.find(item => item.id === id)}
         product.inCart = true;
         product.count = 1;
         product.total = product.price;
         this.setState({
-            cart: [...this.cart, product]
+            cart: [...this.state.cart, product]
         })
     }
 
