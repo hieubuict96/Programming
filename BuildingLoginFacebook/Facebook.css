@@ -1,6 +1,8 @@
 body {
     margin: 0px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
 #facebook {
@@ -17,8 +19,8 @@ body {
 }
 
 nav {
-    height: 80px;
-    background-color: #405d9b;
+    height: 83px;
+    background: linear-gradient(0deg, #3b5998, #4d68a1);
     display: flex;
 }
 
@@ -82,7 +84,7 @@ nav {
 }
 
 input {
-    border: 1px solid black;
+    border: 0.5px solid black;
 }
 
 input:focus {
@@ -116,12 +118,14 @@ input:focus {
 
 .contentRight h1 {
     font-size: 40px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    margin-top: 17px;
 }
 
-.contentRight p {
-    font-size: 20px;
-    margin: 0;
+.quick {
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .contentRight input[type=text] {
@@ -133,14 +137,155 @@ input:focus {
 }
 
 .firstName {
+    width: 192px;
     margin-right: 10px;
-    margin-bottom: 10px;
+    height: 40px;
 }
 
 .mobileOrEmail {
     margin-top: 0px;
+    width: 400px;
+    height: 40px;
 }
 
 .name {
     margin: 0px;
+    margin-bottom: 10px;
+}
+
+.surname {
+    width: 192px;
+    height: 40px;
+}
+
+.pmobileOrEmail {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contentRight {
+    width: 450px;
+}
+
+.newPwd {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.InputNewPwd {
+    width: 400px;
+    height: 40px;
+}
+
+.date {
+    color: #9c949c;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+#day {
+    border: 1px solid #ccd0d5;
+    height: 29px;
+    margin: 0;
+}
+
+#month {
+    border: 1px solid #ccd0d5;
+    height: 29px;
+    margin: 0;
+}
+
+#year {
+    border: 1px solid #ccd0d5;
+    height: 29px;
+}
+
+.gender {
+    color: #9c949c;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.term {
+    text-align: justify;
+    font-size: 12px;
+    width: 300px;
+    color: #98778a;
+    margin-bottom: 20px;
+}
+
+.term a {
+    text-decoration: none;
+}
+
+.signUp {
+    background: linear-gradient(0deg, #578943, #65aa53);
+    height: 38px;
+    width: 195px;
+    color: #f3ffff;
+    border: 1.4px solid #3b6e22;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.create {
+    color: #786666;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.create a {
+    text-decoration: none;
+}
+
+.create a:hover {
+    text-decoration: underline;
+}
+
+footer > div {
+    width: 980px;
+    margin-left: 460px;
+    margin-top: 57px;
+}
+
+hr {
+    color: #9a9a5a;
+    opacity: 50%;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.Eng {
+    color: #8a738a;
+}
+
+.useLan span {
+    display: inline-block;
+    padding: 4px;
+}
+
+footer span:hover {
+    text-decoration: underline;
+}
+
+footer {
+    font-size: 14px;
+}
+
+.services span {
+    display: inline-block;
+    padding: 6px;
+}
+
+.facebook2020 {
+    color: #9c98a3;
 }
