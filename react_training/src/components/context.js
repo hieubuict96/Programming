@@ -12,6 +12,16 @@ class ProductProvider extends Component {
         subTotal: 0
     }
 
+    componentDidMount() {
+        this.setState({
+        products: storeProducts,
+        cart: [],
+        detailProduct: [],
+        cartTotal: 0,
+        subTotal: 0
+        })
+    }
+
     addToCart = (id) => {
         const product = this.state.products.find(item => item.id === id)
         product.inCart = true;
@@ -53,10 +63,26 @@ class ProductProvider extends Component {
         }
     }
 
+    deleteProduct = (id) => {
+        let cart = [...this.state.cart]
+        const product = cart.find(item => item.id === id)
+        const index = cart.indexOf(product)
+        cart.splice(index)
+        this.setState({
+            cart: cart
+        })
+    }
+
     render() {
         return (
-            <ContextProduct.Provider value={storeProducts
-
+            <ContextProduct.Provider value={
+                {
+                ...this.state,
+                addToCart: this.addToCart,
+                incrementQty: this.incrementQty,
+                decrementQty: this.decrementQty,
+                deleteProduct: this.deleteProduct
+                }
             }>
 
             </ContextProduct.Provider>
