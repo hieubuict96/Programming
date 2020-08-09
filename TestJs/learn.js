@@ -1,7 +1,7 @@
-let a = [1,2,3,4];
+let a = [1,2,3, { a: "abc", b: "def"}]
 
-function myfunc() {
-    a = [2,3,4,5,6]
-}
+let b = a.find(item => item.a === "abc")
 
-console.log(a)
+a = 0;
+
+console.log(b)

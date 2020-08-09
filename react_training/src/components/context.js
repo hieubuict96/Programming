@@ -13,7 +13,7 @@ class ProductProvider extends Component {
     }
 
     addToCart = (id) => {
-        const product = {...this.state.products.find(item => item.id === id)}
+        const product = this.state.products.find(item => item.id === id)
         product.inCart = true;
         product.count = 1;
         product.total = product.price;
@@ -23,10 +23,10 @@ class ProductProvider extends Component {
     }
 
     incrementQty = (id) => {
-        const product = {...this.state.cart.find(item => item.id === id)}
+        const product = this.state.cart.find(item => item.id === id)
         product.count = product.count + 1;
         product.total = product.total + product.price;
-        const index = {...this.state.cart.indexOf(product)};
+        const index = this.state.cart.indexOf(product);
         this.state.cart.splice(index);
         this.setState({
             cart: [...this.state.cart, product]
@@ -34,12 +34,12 @@ class ProductProvider extends Component {
     }
 
     decrementQty = (id) => {
-        let cart = [...this.state.cart]
-        const product = {...cart.find(item => item.id === id)}
+        let cart = this.state.cart
+        const product = cart.find(item => item.id === id)
         if (product.count >= 2) {
             product.count -= 1;
             product.total -= product.price;
-            const index = {...cart.indexOf(product)}
+            const index = cart.indexOf(product)
             cart.splice(index)
             this.setState({
                 cart: [...cart, product]
@@ -48,7 +48,7 @@ class ProductProvider extends Component {
             const index = cart.indexOf(product)
             cart.splice(index)
             this.setState({
-                cart: [...this.state.cart]
+                cart: cart
             })
         }
     }
