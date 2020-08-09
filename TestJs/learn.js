@@ -1,7 +1,7 @@
-let a = [1,2,3,4,5]
+let a = [1,2,3,4];
+
 function myfunc() {
-    a[3] = 10
+    a = [2,3,4,5,6]
 }
 
-let b = a;
-console.log(b)
+console.log(a)
