@@ -1,9 +1,10 @@
-let a = [{a: "ab", b: "cd"}, {a: "ef", d: "gh"}]
 
-let b = a.map(value => {
-    return value.a;
-})
+let a = 1;
 
-a = 1;
+function abc() {
+    return [1,2,3]
+}
 
-console.log(b)
+abc()[1] = 6;
+
+console.log(abc())
