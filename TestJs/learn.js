@@ -1,10 +1,7 @@
+let a = 7.554454
+let b = a.toFixed(3)
+console.log(b);
+let c = parseFloat("1.223bhlfhsl  asifwei")
 
-let a = 1;
-
-function abc() {
-    return [1,2,3]
-}
-
-abc()[1] = 6;
-
-console.log(abc())
+console.log(c)
+console.log(pi);

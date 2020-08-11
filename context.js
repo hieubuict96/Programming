@@ -6,14 +6,14 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
   state = {
-      products: [],
+      products: [],                                 // sản phẩm nào được thêm thì state này chuyển inCart = true; count = 1; total = price sản phẩm đó
       detailProduct: detailProduct,
-      cart: [],
+      cart: [],                                                                       // = mảng sản phẩm với inCart = true; count = tổng số sp của loại sp đó; total = tổng giá tiền của loại sp đó
       modalOpen: false,
-      modalProduct: detailProduct,
-      cartSubTotal: 0,
-      cartTax: 0,
-      cartTotal: 0
+      modalProduct: detailProduct,      //= sản phẩm được chọn
+      cartSubTotal: 0,                                // = giá tiền của tất cả các sản phẩm có trong giỏ hàng chưa thuế
+      cartTax: 0,                                         // = tổng thuế của tất cả sản phẩm có trong giỏ hàng
+      cartTotal: 0                                        // = tổng giá tiền phải trả cho giỏ hàng được chọn
   }
 
   componentDidMount(){
@@ -47,15 +47,16 @@ class ProductProvider extends Component {
 
   addToCart = (id) => {
      let tempProducts = [...this.state.products];
-     const product = this.getItem(id);
-     const index = tempProducts.indexOf(product);
+     const selectedproduct = this.getItem(id);
+     const index = tempProducts.indexOf(selectedproduct);
+     const product = tempProducts[index]                                        // tu viet
      product.inCart = true;
      product.count = 1;
      const price = product.price;
      product.total = price;
 
      this.setState(()=>{
-       return {products:tempProducts, cart:[...this.state.cart, product]}       //state.cart có giá trị là danh sách sản phẩm trong giỏ hàng
+       return {products:tempProducts, cart:[...this.state.cart, product]}       //state.cart có giá trị là mảng danh sách sản phẩm trong giỏ hàng
      },
      ()=>{
        this.addTotals();
@@ -82,7 +83,7 @@ class ProductProvider extends Component {
     const index = tempCart.indexOf(selectedProduct);
     const product = tempCart[index];
 
-    product.count = product.count + 1;
+    product.count = product.count + 1;    
     product.total = product.count * product.price;
     
     this.setState(
