@@ -7,11 +7,12 @@ import Contact from './components/Contact'
 import { Switch, Route } from 'react-router-dom'
 import 'project_react/Bootstrap4.1.3/css/bootstrap.min.css'
 import 'project_react/fontawesome-free-5.13.0-web/css/all.min.css'
+import { ProductProvider} from './components/context'
 
 class App extends Component {
 	render(){
 		return(
-			<React.Fragment>
+				<ProductProvider>
 				<NavBar />
 				<Switch>
 					<Route exact path="/"  component= {Index} />
@@ -19,7 +20,7 @@ class App extends Component {
 					<Route exact path="/cart"   component={Cart} />
 					<Route exact path="/contact"  component={Contact} />
 				</Switch>
-			</React.Fragment>
+				</ProductProvider>
 		)
 	}
 }
