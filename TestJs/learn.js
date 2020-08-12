@@ -1,7 +1,7 @@
-let a = 7.554454
-let b = a.toFixed(3)
-console.log(b);
-let c = parseFloat("1.223bhlfhsl  asifwei")
+let a = ["abd", "gr", 5]
 
-console.log(c)
-console.log(pi);
+let b = a.find(function(item) {
+    function(item) {
+        return item == "abd"
+    }
+})

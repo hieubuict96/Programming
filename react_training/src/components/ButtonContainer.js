@@ -8,10 +8,16 @@ export const ButtonContainer = styled.button
     color: rgb(21, 21, 204);
     border: 1px solid rgb(21, 21, 204);
     border-radius: 5px;
-    transition: all 0.5s linear 0s;
     cursor: pointer;
+    transition: all 0.5s linear 0s;
     &:hover {
         background: rgb(21, 21, 204);
         color: white;
+    }
+    .btn-able {
+        cursor: pointer;
+    }
+    .btn-disable {
+        cursor: default;
     }
 `

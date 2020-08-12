@@ -1,75 +1,85 @@
-import React, { Component } from 'react';
-import styled from "styled-components"
-import { Link } from "react-router-dom"
+import React, { Component } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { ProductConsumer } from "./context";
 
 class Product extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    addCart(id) {
-        return "add product successfully";
-    }
-
-    render() {
-        return (
-            <DivWrapper className="col-sm-12 col-md-6 col-lg-3 col-xl-2 mx-md-1 mx-lg-2 mx-xl-4 p-0 my-4">
+  render() {
+    return (
+      <DivWrapper className="col-sm-12 col-md-6 col-lg-3 col-xl-2 mx-md-1 mx-lg-2 mx-xl-4 p-0 my-4">
+        <ProductConsumer>
+          {(context) => (
+            <div
+              className="card"
+              onClick={() => context.handleDetail(this.props.id)}
+            >
+              <div className="img-container">
                 <Link to="/detail" className="link">
-                    <div className="card">
-                        <div className="img-container">
-                            <img src={this.props.img} alt="store" className="card-img-top p-4" />
-                            {
-                                (this.props.inCart === true) ?
-                                    <button className="incart py-1 px-2 text-capitalize" disabled>
-                                        in cart
-                                    </button>
-                                    :
-                                    <button className="cart-btn py-1 px-2" onClick={() => this.addCart(this.props.id)}>
-                                        <i className="fas fa-cart-plus" />
-                                    </button>
-                            }
-                        </div>
-                        <div className="card-footer p-0">
-                            <div className="d-flex">
-                                <span className="mr-auto ml-1">{this.props.title}</span>
-                                <span className="mr-1">{this.props.price} $</span>
-                            </div>
-                            <div className="d-flex">
-                                <span className="text-capitalize ml-1">company</span>
-                                <span className="ml-auto text-capitalize mr-1">{this.props.company}</span>
-                            </div>
-                        </div>
-                    </div>
+                  <img
+                    src={this.props.img}
+                    alt="store"
+                    className="card-img-top p-4"
+                  />
                 </Link>
-            </DivWrapper>
-        )
-    }
+                {this.props.inCart === true ? (
+                  <button className="incart py-1 px-2 text-capitalize" disabled>
+                    in cart
+                  </button>
+                ) : (
+                  <button
+                    className="cart-btn py-1 px-2"
+                    onClick={() => {
+                      context.addToCart(this.props.id);
+                      context.openModal(this.props.id);
+                    }}
+                  >
+                    <i className="fas fa-cart-plus" />
+                  </button>
+                )}
+              </div>
+              <div className="card-footer p-0">
+                <div className="d-flex">
+                  <span className="mr-auto ml-1">{this.props.title}</span>
+                  <span className="mr-1">{this.props.price} $</span>
+                </div>
+                <div className="d-flex">
+                  <span className="text-capitalize ml-1">company</span>
+                  <span className="ml-auto text-capitalize mr-1">
+                    {this.props.company}
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
+        </ProductConsumer>
+      </DivWrapper>
+    );
+  }
 }
 
-const DivWrapper = styled.div
-    `
-background-color: rgb(230, 255, 255);
-transition: all 0.5s linear 0s;
+const DivWrapper = styled.div`
+  background-color: rgb(230, 255, 255);
+  transition: all 0.5s linear 0s;
 
-.img-container {
+  .img-container {
     position: relative;
     overflow: hidden;
-}
+  }
 
-.card-img-top {
+  .card-img-top {
     transition: all 0.5s linear;
-}
+  }
 
-&:hover .card-img-top {
+  &:hover .card-img-top {
     transform: scale(1.2);
-}
+  }
 
-&:hover {
+  &:hover {
     box-shadow: 0px 0px 5px 0 rgb(230, 145, 255);
     cursor: pointer;
-}
+  }
 
-.incart {
+  .incart {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -79,9 +89,9 @@ transition: all 0.5s linear 0s;
     border: 0.1px solid transparent;
     transition: all 0.5s linear;
     transform: translate(100%, 100%);
-}
+  }
 
-.cart-btn {
+  .cart-btn {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -91,22 +101,22 @@ transition: all 0.5s linear 0s;
     border: 0.1px solid transparent;
     transition: all 0.5s linear;
     transform: translate(100%, 100%);
-}
+  }
 
-&:hover .cart-btn, &:hover .incart {
+  &:hover .incart {
     transform: translate(0, 0);
-}
+  }
 
-.cart-btn:hover {
+  .cart-btn:hover {
     background: rgb(21, 21, 204);
     color: white;
     cursor: pointer;
     border-color: transparent;
-}
+  }
 
-.link {
+  .link {
     text-decoration: none;
-}
-`
+  }
+`;
 
 export default Product;
