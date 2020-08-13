@@ -1,7 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const ButtonContainer = styled.button
-`
+export const ButtonContainer = styled.button`
     height: auto;
     width: auto;
     background: transparent;
@@ -20,4 +19,4 @@ export const ButtonContainer = styled.button
     .btn-disable {
         cursor: default;
     }
-`
+`;
