@@ -14,7 +14,7 @@ class Product extends Component {
               onClick={() => context.handleDetail(this.props.id)}
             >
               <div className="img-container">
-                <Link to="/detail" className="link">
+                <Link to="/detail">
                   <img
                     src={this.props.img}
                     alt="store"
@@ -33,10 +33,11 @@ class Product extends Component {
                       context.openModal(this.props.id);
                     }}
                   >
-                    <i className="fas fa-cart-plus" />
+                    <i className="fas fa-cart-plus"></i>
                   </button>
                 )}
               </div>
+              <Link to="/detail" className="link">
               <div className="card-footer p-0">
                 <div className="d-flex">
                   <span className="mr-auto ml-1">{this.props.title}</span>
@@ -49,6 +50,7 @@ class Product extends Component {
                   </span>
                 </div>
               </div>
+              </Link>
             </div>
           )}
         </ProductConsumer>
@@ -107,6 +109,10 @@ const DivWrapper = styled.div`
     transform: translate(0, 0);
   }
 
+  &:hover .cart-btn {
+    transform: translate(0, 0);
+  }
+
   .cart-btn:hover {
     background: rgb(21, 21, 204);
     color: white;
@@ -117,6 +123,6 @@ const DivWrapper = styled.div`
   .link {
     text-decoration: none;
   }
-`;
+`
 
 export default Product;
