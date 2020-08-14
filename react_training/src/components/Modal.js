@@ -30,7 +30,7 @@ export default class Modal extends Component {
                                         />
                                         <h5>{title}</h5>
                                         <h5 className="text-muted">
-                                            price: $ {price}
+                                            price: {price} $
                                         </h5>
                                         <Link to="/">
                                             <ButtonContainer className="mr-3"
