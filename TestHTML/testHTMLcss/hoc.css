@@ -1,11 +1,9 @@
-a {
+.a {
     display: inline-block;
-    height: 200px;
-    width: 200px;
-    background-color: yellow;
-  
 }
 
-a:hover {
-    
+.b {
+    width: 200px;
+    height:200px;
+    margin: 200px;
 }
