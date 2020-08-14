@@ -54,7 +54,7 @@ export default class Modal extends Component {
                 }}
             </ProductConsumer>
         );
-    }
+    } 
 }
 
 const ModalContainer = styled.div`
