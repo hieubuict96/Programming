@@ -24,7 +24,7 @@ export default class Modal extends Component {
                                     >
                                         <h5>item added to the cart</h5>
                                         <img
-                                            src={img} 
+                                            src={img}
                                             className="img-fluid"
                                             alt="product"
                                         />
@@ -32,8 +32,8 @@ export default class Modal extends Component {
                                         <h5 className="text-muted">
                                             price: {price} $
                                         </h5>
-                                        <Link to="/">
-                                            <ButtonContainer className="mr-3"
+                                        <Link to="/" className="mr-3">
+                                            <ButtonContainer
                                                 onClick={() => closeModal()}
                                             >
                                                 store
@@ -54,7 +54,7 @@ export default class Modal extends Component {
                 }}
             </ProductConsumer>
         );
-    } 
+    }
 }
 
 const ModalContainer = styled.div`
