@@ -1,7 +1,9 @@
-let a = ["abd", "gr", 5]
+var a = []
+if ( a) {
+    console.log(123)
+} else {
+    console.log(444);
+}
 
-let b = a.find(function(item) {
-    function(item) {
-        return item == "abd"
-    }
-})
+
+console.log(a);

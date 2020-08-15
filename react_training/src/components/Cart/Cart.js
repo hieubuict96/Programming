@@ -8,12 +8,10 @@ export default class Cart extends Component {
             <ProductConsumer>
                 <h1 className="text-uppercase text-center mt-5">your cart</h1>
                 {(context) =>{
-                    if (!context.cart === []) {
+                    if (context.cart.length > 0) {
                         context.cart.map((value) => {
                             return (
-                                <div className="container">
                                     <CartItem {...value} />
-                                </div>
                             )
                         })
                     } else {

@@ -1,6 +1,7 @@
-<?php
-    function abc (int $a, string $b) {
-        return $a + $b;
-    }
-
-    echo abc (5, 5);
+<?php 
+$a;
+if (isset($a)) {
+    echo 1;
+} else {
+    echo 2;
+}

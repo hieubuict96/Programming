@@ -20,6 +20,6 @@ export default class CartItem extends Component {
                     <span>{this.props.total} $</span>
                 </span>
             </div>
-        );
+        )
     }
 }
