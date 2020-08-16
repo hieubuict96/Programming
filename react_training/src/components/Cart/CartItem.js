@@ -4,7 +4,7 @@ export default class CartItem extends Component {
     render() {
         return (
             <div className="d-flex">
-                <img src={this.props.img} className="col-2" />
+                <img src={this.props.img} className="col-2" alt="img" />
                 <span className="col-2">{this.props.title}</span>
                 <span className="col-2">{this.props.price}</span>
                 <span className="col-2">

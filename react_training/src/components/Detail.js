@@ -12,7 +12,7 @@ export default class Detail extends Component {
                         <div className="d-flex">
                             <img
                                 src={context.detailProduct.img}
-                                alt="image"
+                                alt="img"
                                 className="col-sm-10 col-md-5 mb-auto"
                             />
                             <div className="col-sm-10 col-md-5 mb-auto">
