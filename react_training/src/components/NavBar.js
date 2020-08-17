@@ -15,19 +15,18 @@ class NavBar extends Component {
                 <ul className="navbar-nav ml-md-5 ml-sm-2">
                     <li className="nav-item mx-md-5 mx-sm-2">
                         <Link
-                            to=""
+                            to="/"
                             className="nav-link text-capitalize bg-success"
                         >
                             product
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link
-                            to="/contact"
+                        <button
                             className="nav-link text-capitalize bg-success"
                         >
                             contact
-                        </Link>
+                        </button>
                     </li>
                 </ul>
                 <Link className="ml-auto" to="/cart">
