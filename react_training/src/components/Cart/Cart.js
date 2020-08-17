@@ -8,15 +8,17 @@ export default class Cart extends Component {
             <React.Fragment>
                 <h1 className="text-uppercase text-center mt-5">your cart</h1>
                 <ProductConsumer>
-                    {(context) =>
-                        context.cart.length > 0 ? (
-                            context.cart.map((value) => <CartItem {...value} />)
-                        ) : (
-                            <h2 className="text-uppercase text-center">
-                                your cart is empty
-                            </h2>
-                        )
-                    }
+                    {context => {
+                        if (context.cart.length > 0) {
+                            return(
+                                context.cart.map(value => {
+                                    return <CartItem {...value} />
+                                })
+                            )
+                        } else {
+                            return <h5 className="text-capitalize text-center mt-5">your cart is empty</h5>
+                        }
+                    }}
                 </ProductConsumer>
             </React.Fragment>
         );
