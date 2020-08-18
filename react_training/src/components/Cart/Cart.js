@@ -45,23 +45,21 @@ export default class Cart extends Component {
                                         </p>
                                         <p className="font-weight-bold text-right">
                                             <span className="text-uppercase">
-                                                sub total :
+                                                sub total : 
                                             </span>
-                                            <span>
-                                                {context.cartSubTotal} $
-                                            </span>
+                                            <span> {context.cartSubTotal} $</span>
                                         </p>
                                         <p className="font-weight-bold text-right">
                                             <span className="text-uppercase">
                                                 tax :
                                             </span>
-                                            <span>{context.cartTax} $</span>
+                                            <span> {context.cartTax} $</span>
                                         </p>
                                         <p className="font-weight-bold text-right">
                                             <span className="text-uppercase">
                                                 total :
                                             </span>
-                                            <span>{context.cartTotal} $</span>
+                                            <span> {context.cartTotal} $</span>
                                         </p>
                                     </div>
                                 </>
